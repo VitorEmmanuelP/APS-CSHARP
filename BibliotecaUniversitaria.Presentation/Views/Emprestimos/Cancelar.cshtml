@@ -1,0 +1,113 @@
+@model BibliotecaUniversitaria.Application.DTOs.EmprestimoDTO
+
+@{
+    ViewData["Title"] = "Cancelar Empréstimo";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-times"></i> Cancelar Empréstimo
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-warning">
+                        <h6><i class="fas fa-exclamation-triangle"></i> Atenção!</h6>
+                        <p>Você está prestes a cancelar este empréstimo. Esta ação fará com que:</p>
+                        <ul>
+                            <li>O empréstimo seja marcado como "Cancelado"</li>
+                            <li>O livro volte a ficar disponível para novos empréstimos</li>
+                            <li>Esta ação não pode ser desfeita</li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-muted">Informações do Empréstimo</h6>
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td><strong>ID:</strong></td>
+                                    <td>@Model.Id</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Status:</strong></td>
+                                    <td>
+                                        <span class="badge bg-success">@Model.Status</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Data de Empréstimo:</strong></td>
+                                    <td>@Model.DataEmprestimo.ToString("dd/MM/yyyy HH:mm")</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Devolução Prevista:</strong></td>
+                                    <td>@Model.DataDevolucaoPrevista.ToString("dd/MM/yyyy HH:mm")</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-muted">Informações do Livro</h6>
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td><strong>Título:</strong></td>
+                                    <td>@Model.LivroTitulo</td>
+                                </tr>
+                            </table>
+
+                            <h6 class="text-muted mt-4">Detalhes do Empréstimo</h6>
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td><strong>Quantidade:</strong></td>
+                                    <td>@Model.QuantidadeEmprestada</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.Observacoes))
+                    {
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <h6 class="text-muted">Observações</h6>
+                                <div class="alert alert-light">
+                                    @Model.Observacoes
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <form asp-action="Cancelar" method="post">
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between">
+                                    <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-secondary">
+                                        <i class="fas fa-arrow-left"></i> Voltar
+                                    </a>
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fas fa-times"></i> Confirmar Cancelamento
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-info-circle"></i> Informações</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Cancelamento:</strong> Esta ação cancela o empréstimo e libera o livro.</p>
+                    <p><strong>Disponibilidade:</strong> O livro ficará disponível para novos empréstimos.</p>
+                    <p><strong>Histórico:</strong> O empréstimo cancelado permanecerá no histórico.</p>
+                    <p><strong>Irreversível:</strong> Esta ação não pode ser desfeita.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

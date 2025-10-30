@@ -1,0 +1,75 @@
+@model BibliotecaUniversitaria.Application.DTOs.AutorCreateDTO
+
+@{
+    ViewData["Title"] = "Novo Autor";
+}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-user-plus me-2"></i>Novo Autor
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label asp-for="Nome" class="form-label">
+                                    <i class="fas fa-user me-1"></i>Nome do Autor <span class="text-danger">*</span>
+                                </label>
+                                <input asp-for="Nome" class="form-control" placeholder="Digite o nome completo do autor" />
+                                <span asp-validation-for="Nome" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Nacionalidade" class="form-label">
+                                    <i class="fas fa-flag me-1"></i>Nacionalidade
+                                </label>
+                                <input asp-for="Nacionalidade" class="form-control" placeholder="Ex: Brasileiro" />
+                                <span asp-validation-for="Nacionalidade" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="DataNascimento" class="form-label">
+                                    <i class="fas fa-calendar me-1"></i>Data de Nascimento
+                                </label>
+                                <input asp-for="DataNascimento" type="date" class="form-control" />
+                                <span asp-validation-for="DataNascimento" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label asp-for="Biografia" class="form-label">
+                                    <i class="fas fa-book-open me-1"></i>Biografia
+                                </label>
+                                <textarea asp-for="Biografia" class="form-control" rows="4" placeholder="Digite uma breve biografia do autor..."></textarea>
+                                <span asp-validation-for="Biografia" class="text-danger"></span>
+                                <div class="form-text">Máximo de 2000 caracteres</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left me-1"></i>Voltar
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-1"></i>Salvar Autor
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

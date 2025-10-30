@@ -1,0 +1,118 @@
+@model BibliotecaUniversitaria.Application.ViewModels.LivroViewModel
+
+@{
+    ViewData["Title"] = "Editar Livro";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fas fa-edit"></i> @ViewData["Title"]</h2>
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3">
+                        <label asp-for="Titulo" class="form-label"></label>
+                        <input asp-for="Titulo" class="form-control" />
+                        <span asp-validation-for="Titulo" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="AutorId" class="form-label">Autor</label>
+                        <select asp-for="AutorId" class="form-select" asp-items="@(ViewBag.Autores as Microsoft.AspNetCore.Mvc.Rendering.SelectList)">
+                            <option value="">Selecione um autor</option>
+                        </select>
+                        <span asp-validation-for="AutorId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="CategoriaId" class="form-label">Categoria</label>
+                        <select asp-for="CategoriaId" class="form-select" asp-items="@(ViewBag.Categorias as Microsoft.AspNetCore.Mvc.Rendering.SelectList)">
+                            <option value="">Selecione uma categoria</option>
+                        </select>
+                        <span asp-validation-for="CategoriaId" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label asp-for="AnoPublicacao" class="form-label"></label>
+                        <input asp-for="AnoPublicacao" class="form-control" />
+                        <span asp-validation-for="AnoPublicacao" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label asp-for="QuantidadeTotal" class="form-label"></label>
+                        <input asp-for="QuantidadeTotal" class="form-control" />
+                        <span asp-validation-for="QuantidadeTotal" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label asp-for="NumeroPaginas" class="form-label"></label>
+                        <input asp-for="NumeroPaginas" class="form-control" />
+                        <span asp-validation-for="NumeroPaginas" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Editora" class="form-label"></label>
+                        <input asp-for="Editora" class="form-control" />
+                        <span asp-validation-for="Editora" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Sinopse" class="form-label"></label>
+                <textarea asp-for="Sinopse" class="form-control" rows="4"></textarea>
+                <span asp-validation-for="Sinopse" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> Salvar
+                </button>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5><i class="fas fa-info-circle"></i> Informações</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Quantidade Disponível:</strong> @Model.QuantidadeDisponivel</p>
+                <p><strong>Quantidade Total:</strong> @Model.QuantidadeTotal</p>
+                <hr>
+                <p><small class="text-muted">A quantidade disponível será ajustada automaticamente quando houver empréstimos.</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

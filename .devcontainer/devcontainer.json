@@ -1,0 +1,37 @@
+{
+    "name": "Biblioteca Universitária - .NET 8.0",
+    "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    "postCreateCommand": "bash start-sqlserver.sh",
+    "forwardPorts": [
+        5000,
+        5001,
+        1433
+    ],
+    "portsAttributes": {
+        "5000": {
+            "label": "Aplicação ASP.NET Core",
+            "onAutoForward": "notify"
+        },
+        "5001": {
+            "label": "Aplicação ASP.NET Core (HTTPS)",
+            "onAutoForward": "notify"
+        },
+        "1433": {
+            "label": "SQL Server",
+            "onAutoForward": "silent"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.csharp",
+                "ms-dotnettools.vscode-dotnet-runtime",
+                "ms-mssql.mssql",
+                "ms-vscode.vscode-json"
+            ]
+        }
+    }
+}

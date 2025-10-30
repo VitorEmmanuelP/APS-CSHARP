@@ -1,0 +1,11 @@
+/Users/vitormesquita/Code/A/APS/BibliotecaUniversitaria.Domain/bin/Debug/net9.0/BibliotecaUniversitaria.Domain.deps.json
+/Users/vitormesquita/Code/A/APS/BibliotecaUniversitaria.Domain/bin/Debug/net9.0/BibliotecaUniversitaria.Domain.dll
+/Users/vitormesquita/Code/A/APS/BibliotecaUniversitaria.Domain/bin/Debug/net9.0/BibliotecaUniversitaria.Domain.pdb
+/Users/vitormesquita/Code/A/APS/BibliotecaUniversitaria.Domain/obj/Debug/net9.0/BibliotecaUniversitaria.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vitormesquita/Code/A/APS/BibliotecaUniversitaria.Domain/obj/Debug/net9.0/BibliotecaUniversitaria.Domain.AssemblyInfoInputs.cache
+/Users/vitormesquita/Code/A/APS/BibliotecaUniversitaria.Domain/obj/Debug/net9.0/BibliotecaUniversitaria.Domain.AssemblyInfo.cs
+/Users/vitormesquita/Code/A/APS/BibliotecaUniversitaria.Domain/obj/Debug/net9.0/BibliotecaUniversitaria.Domain.csproj.CoreCompileInputs.cache
+/Users/vitormesquita/Code/A/APS/BibliotecaUniversitaria.Domain/obj/Debug/net9.0/BibliotecaUniversitaria.Domain.dll
+/Users/vitormesquita/Code/A/APS/BibliotecaUniversitaria.Domain/obj/Debug/net9.0/refint/BibliotecaUniversitaria.Domain.dll
+/Users/vitormesquita/Code/A/APS/BibliotecaUniversitaria.Domain/obj/Debug/net9.0/BibliotecaUniversitaria.Domain.pdb
+/Users/vitormesquita/Code/A/APS/BibliotecaUniversitaria.Domain/obj/Debug/net9.0/ref/BibliotecaUniversitaria.Domain.dll

@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Sistema de Gestão de Biblioteca Universitária";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewBag.Title</h1>
+    <p class="lead">@ViewBag.Message</p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-book fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Livros</h5>
+                <p class="card-text">Gerencie o acervo de livros da biblioteca</p>
+                <a href="@Url.Action("Index", "Livros")" class="btn btn-primary">Gerenciar Livros</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-user-edit fa-3x text-success mb-3"></i>
+                <h5 class="card-title">Autores</h5>
+                <p class="card-text">Cadastre e gerencie os autores</p>
+                <a href="@Url.Action("Index", "Autores")" class="btn btn-success">Gerenciar Autores</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-tags fa-3x text-info mb-3"></i>
+                <h5 class="card-title">Categorias</h5>
+                <p class="card-text">Organize livros por categorias</p>
+                <a href="@Url.Action("Index", "Categorias")" class="btn btn-info">Gerenciar Categorias</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fas fa-search fa-2x text-warning mb-3"></i>
+                <h5 class="card-title">Buscar Livros</h5>
+                <p class="card-text">Encontre livros disponíveis</p>
+                <a href="@Url.Action("Disponiveis", "Livros")" class="btn btn-warning">Ver Livros Disponíveis</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fas fa-book-reader fa-2x text-primary mb-3"></i>
+                <h5 class="card-title">Empréstimos</h5>
+                <p class="card-text">Gerencie os empréstimos de livros</p>
+                <a href="@Url.Action("Index", "Emprestimos")" class="btn btn-primary">Gerenciar Empréstimos</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,143 @@
+@model BibliotecaUniversitaria.Application.DTOs.EmprestimoDTO
+
+@{
+    ViewData["Title"] = "Detalhes do Empréstimo";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-eye"></i> Detalhes do Empréstimo
+                    </h4>
+                    <div>
+                        @if (Model.Status == "Ativo")
+                        {
+                            <a asp-action="Devolver" asp-route-id="@Model.Id" class="btn btn-success btn-sm me-2">
+                                <i class="fas fa-undo"></i> Devolver
+                            </a>
+                            <a asp-action="Cancelar" asp-route-id="@Model.Id" class="btn btn-warning btn-sm">
+                                <i class="fas fa-times"></i> Cancelar
+                            </a>
+                        }
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-muted">Informações do Empréstimo</h6>
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td><strong>ID:</strong></td>
+                                    <td>@Model.Id</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Status:</strong></td>
+                                    <td>
+                                        @if (Model.Status == "Ativo")
+                                        {
+                                            <span class="badge bg-success">@Model.Status</span>
+                                        }
+                                        else if (Model.Status == "Devolvido")
+                                        {
+                                            <span class="badge bg-info">@Model.Status</span>
+                                        }
+                                        else if (Model.Status == "Cancelado")
+                                        {
+                                            <span class="badge bg-secondary">@Model.Status</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning">@Model.Status</span>
+                                        }
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Data de Empréstimo:</strong></td>
+                                    <td>@Model.DataEmprestimo.ToString("dd/MM/yyyy HH:mm")</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Devolução Prevista:</strong></td>
+                                    <td>@Model.DataDevolucaoPrevista.ToString("dd/MM/yyyy HH:mm")</td>
+                                </tr>
+                                @if (Model.DataDevolucaoReal.HasValue)
+                                {
+                                    <tr>
+                                        <td><strong>Devolução Real:</strong></td>
+                                        <td>@Model.DataDevolucaoReal.Value.ToString("dd/MM/yyyy HH:mm")</td>
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-muted">Informações do Livro</h6>
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td><strong>Título:</strong></td>
+                                    <td>@Model.LivroTitulo</td>
+                                </tr>
+                            </table>
+
+                            <h6 class="text-muted mt-4">Detalhes do Empréstimo</h6>
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td><strong>Quantidade Emprestada:</strong></td>
+                                    <td>@Model.QuantidadeEmprestada</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.Observacoes))
+                    {
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <h6 class="text-muted">Observações</h6>
+                                <div class="alert alert-light">
+                                    @Model.Observacoes
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    @if (Model.Status == "Ativo")
+                    {
+                        var diasRestantes = (Model.DataDevolucaoPrevista - DateTime.Now).Days;
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                @if (diasRestantes < 0)
+                                {
+                                    <div class="alert alert-danger">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <strong>Empréstimo Atrasado!</strong> Este empréstimo está @(Math.Abs(diasRestantes)) dias atrasado.
+                                    </div>
+                                }
+                                else if (diasRestantes <= 2)
+                                {
+                                    <div class="alert alert-warning">
+                                        <i class="fas fa-clock"></i>
+                                        <strong>Atenção!</strong> Este empréstimo vence em @diasRestantes dias.
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="alert alert-info">
+                                        <i class="fas fa-info-circle"></i>
+                                        <strong>Prazo:</strong> @diasRestantes dias restantes para devolução.
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="card-footer">
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Voltar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

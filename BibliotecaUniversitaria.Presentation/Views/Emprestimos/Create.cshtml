@@ -1,0 +1,112 @@
+@model BibliotecaUniversitaria.Application.DTOs.EmprestimoCreateDTO
+
+@{
+    ViewData["Title"] = "Novo Empréstimo";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-plus"></i> Novo Empréstimo
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="mb-3">
+                                    <label asp-for="LivroId" class="form-label">Livro</label>
+                                    <select asp-for="LivroId" class="form-select" asp-items="ViewBag.Livros">
+                                        <option value="">Selecione um livro</option>
+                                    </select>
+                                    <span asp-validation-for="LivroId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label asp-for="QuantidadeEmprestada" class="form-label">Quantidade</label>
+                                    <input asp-for="QuantidadeEmprestada" class="form-control" type="number" min="1" value="1" />
+                                    <span asp-validation-for="QuantidadeEmprestada" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label asp-for="DataEmprestimo" class="form-label">Data do Empréstimo</label>
+                                    <input asp-for="DataEmprestimo" class="form-control" type="date" />
+                                    <span asp-validation-for="DataEmprestimo" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label asp-for="DataDevolucaoPrevista" class="form-label">Data de Devolução Prevista</label>
+                                    <input asp-for="DataDevolucaoPrevista" class="form-control" type="date" />
+                                    <span asp-validation-for="DataDevolucaoPrevista" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label asp-for="Observacoes" class="form-label">Observações</label>
+                                    <textarea asp-for="Observacoes" class="form-control" rows="3" placeholder="Observações sobre o empréstimo (opcional)"></textarea>
+                                    <span asp-validation-for="Observacoes" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between">
+                                    <a asp-action="Index" class="btn btn-secondary">
+                                        <i class="fas fa-arrow-left"></i> Voltar
+                                    </a>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-save"></i> Criar Empréstimo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-info-circle"></i> Informações</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Livro:</strong> Selecione um livro disponível para empréstimo.</p>
+                    <p><strong>Usuário:</strong> Escolha o usuário que receberá o livro.</p>
+                    <p><strong>Data de Empréstimo:</strong> Data em que o livro foi emprestado.</p>
+                    <p><strong>Data de Devolução:</strong> Data limite para devolução do livro.</p>
+                    <p><strong>Observações:</strong> Informações adicionais sobre o empréstimo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hoje = new Date().toISOString().split('T')[0];
+            document.querySelector('input[name="DataEmprestimo"]').value = hoje;
+
+            const dataDevolucao = new Date();
+            dataDevolucao.setDate(dataDevolucao.getDate() + 7);
+            document.querySelector('input[name="DataDevolucaoPrevista"]').value = dataDevolucao.toISOString().split('T')[0];
+        });
+    </script>
+}

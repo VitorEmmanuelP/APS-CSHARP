@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "bslkrTsBEoM=",
+  "success": true,
+  "projectFilePath": "/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/vitormesquita/.nuget/packages/microsoft.netcore.app.ref/8.0.19/microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
+    "/Users/vitormesquita/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.19/microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512"
+  ],
+  "logs": []
+}
