@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bslkrTsBEoM=",
+  "dgSpecHash": "rDl4kwUGpnc=",
   "success": true,
-  "projectFilePath": "/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
-  "expectedPackageFiles": [
-    "/Users/vitormesquita/.nuget/packages/microsoft.netcore.app.ref/8.0.19/microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
-    "/Users/vitormesquita/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.19/microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512"
-  ],
+  "projectFilePath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -110,9 +110,15 @@ if docker ps | grep -q "biblioteca-sqlserver"; then
     echo ""
     echo -e "${CYAN}Próximos passos:${NC}"
     echo -e "${YELLOW}1. Execute as migrations:${NC}"
+    echo "   dotnet tool restore"
+
+
+    echo ""
+    echo -e "${CYAN}Próximos passos:${NC}"
+    echo -e "${YELLOW}2. Execute as migrations:${NC}"
     echo "   dotnet ef database update --project BibliotecaUniversitaria.Infrastructure --startup-project BibliotecaUniversitaria.Presentation"
     echo ""
-    echo -e "${YELLOW}2. Execute a aplicação:${NC}"
+    echo -e "${YELLOW}3. Execute a aplicação:${NC}"
     echo "   dotnet run --project BibliotecaUniversitaria.Presentation"
 
     echo ""

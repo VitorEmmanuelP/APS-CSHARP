@@ -15,7 +15,7 @@ namespace BibliotecaUniversitaria.Application.Interfaces
         Task<bool> ExisteAsync(int id);
     }
 
-=
+
     public interface IEmprestimoService
     {
         Task<IEnumerable<EmprestimoDTO>> ObterTodosAsync();
