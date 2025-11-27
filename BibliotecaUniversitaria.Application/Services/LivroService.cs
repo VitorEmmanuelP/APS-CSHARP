@@ -103,9 +103,26 @@ namespace BibliotecaUniversitaria.Application.Services
             if (livro == null)
                 return false;
 
-            var emprestimosAtivos = await _unitOfWork.Emprestimos.GetByLivroIdAsync(id);
-            if (emprestimosAtivos.Any(e => e.Status == Domain.Enums.StatusEmprestimo.Ativo))
-                throw new BusinessRuleValidationException("Não é possível excluir um livro com empréstimos ativos");
+            var todosEmprestimos = await _unitOfWork.Emprestimos.GetByLivroIdAsync(id);
+
+            // Verifica se há empréstimos ativos ou atrasados (não pode deletar)
+            var emprestimosAtivosOuAtrasados = todosEmprestimos
+                .Where(e => e.Status == Domain.Enums.StatusEmprestimo.Ativo ||
+                           e.Status == Domain.Enums.StatusEmprestimo.Atrasado);
+
+            if (emprestimosAtivosOuAtrasados.Any())
+                throw new BusinessRuleValidationException("Não é possível excluir um livro com empréstimos ativos ou atrasados");
+
+            // Remove empréstimos devolvidos ou cancelados antes de deletar o livro
+            var emprestimosFinalizados = todosEmprestimos
+                .Where(e => e.Status == Domain.Enums.StatusEmprestimo.Devolvido ||
+                           e.Status == Domain.Enums.StatusEmprestimo.Cancelado)
+                .ToList();
+
+            if (emprestimosFinalizados.Any())
+            {
+                _unitOfWork.Emprestimos.RemoveRange(emprestimosFinalizados);
+            }
 
             _unitOfWork.Livros.Remove(livro);
             await _unitOfWork.SaveChangesAsync();
