@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kWgbsWPYj4k=",
+  "dgSpecHash": "CIJB2QTEw1I=",
   "success": true,
-  "projectFilePath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj",
+  "projectFilePath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj",
   "expectedPackageFiles": [
     "/Users/vitormesquita/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/vitormesquita/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",

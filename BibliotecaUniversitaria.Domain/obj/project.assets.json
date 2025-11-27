@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
+      "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
       "projectName": "BibliotecaUniversitaria.Domain",
-      "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
+      "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
       "packagesPath": "/Users/vitormesquita/.nuget/packages/",
-      "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Domain/obj/",
+      "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/vitormesquita/.nuget/NuGet/NuGet.Config"

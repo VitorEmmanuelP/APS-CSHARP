@@ -4149,11 +4149,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj",
+      "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj",
       "projectName": "BibliotecaUniversitaria.Presentation",
-      "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj",
+      "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj",
       "packagesPath": "/Users/vitormesquita/.nuget/packages/",
-      "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Presentation/obj/",
+      "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/vitormesquita/.nuget/NuGet/NuGet.Config"
@@ -4169,11 +4169,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {
-              "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj"
+            "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {
+              "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj"
             },
-            "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj": {
-              "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj"
+            "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj": {
+              "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj"
             }
           }
         }

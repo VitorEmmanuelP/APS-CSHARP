@@ -9,121 +9,121 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BibliotecaUniversitaria.Presentation
 build_property.RootNamespace = BibliotecaUniversitaria.Presentation
-build_property.ProjectDir = /Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/
+build_property.ProjectDir = /Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation
+build_property.MSBuildProjectDirectory = /Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Autores/Create.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Autores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0b3Jlcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Autores/Delete.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Autores/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0b3Jlcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Autores/Details.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Autores/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0b3Jlcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Autores/Edit.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Autores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0b3Jlcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Autores/Index.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Autores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0b3Jlcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Categorias/Create.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Categorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Categorias/Delete.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Categorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Categorias/Details.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Categorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Categorias/Edit.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Categorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Categorias/Index.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Categorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Emprestimos/Cancelar.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Emprestimos/Cancelar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wcmVzdGltb3MvQ2FuY2VsYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Emprestimos/Create.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Emprestimos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wcmVzdGltb3MvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Emprestimos/Details.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Emprestimos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wcmVzdGltb3MvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Emprestimos/Devolver.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Emprestimos/Devolver.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wcmVzdGltb3MvRGV2b2x2ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Emprestimos/Index.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Emprestimos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wcmVzdGltb3MvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Home/Index.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Home/Privacy.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Livros/Create.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Livros/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGl2cm9zL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Livros/Delete.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Livros/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGl2cm9zL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Livros/Details.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Livros/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGl2cm9zL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Livros/Edit.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Livros/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGl2cm9zL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Livros/Index.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Livros/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGl2cm9zL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Shared/Error.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/_ViewImports.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/_ViewStart.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/vitormesquita/Code/A/AP/APS-C-/BibliotecaUniversitaria.Presentation/Views/Shared/_Layout.cshtml]
+[/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4v2bk7tuke

@@ -98,11 +98,6 @@ namespace BibliotecaUniversitaria.Presentation.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, AutorCreateDTO dto)
         {
-            if (id != id)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try

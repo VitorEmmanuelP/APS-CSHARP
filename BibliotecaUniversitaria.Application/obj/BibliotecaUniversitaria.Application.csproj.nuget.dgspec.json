@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {}
+    "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {}
   },
   "projects": {
-    "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {
+    "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
+        "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
         "projectName": "BibliotecaUniversitaria.Application",
-        "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
+        "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
         "packagesPath": "/Users/vitormesquita/.nuget/packages/",
-        "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Application/obj/",
+        "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vitormesquita/.nuget/NuGet/NuGet.Config"
@@ -27,8 +27,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj": {
-                "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj"
+              "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj": {
+                "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj": {
+    "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
+        "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
         "projectName": "BibliotecaUniversitaria.Domain",
-        "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
+        "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
         "packagesPath": "/Users/vitormesquita/.nuget/packages/",
-        "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Domain/obj/",
+        "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vitormesquita/.nuget/NuGet/NuGet.Config"

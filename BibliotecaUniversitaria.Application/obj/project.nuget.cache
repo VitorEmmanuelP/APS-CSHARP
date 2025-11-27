@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GoELNGuEEBk=",
+  "dgSpecHash": "z9oyl7yqyCA=",
   "success": true,
-  "projectFilePath": "/Users/vitormesquita/Code/A/AULA-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
+  "projectFilePath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
   "expectedPackageFiles": [
     "/Users/vitormesquita/.nuget/packages/mapster/7.4.0/mapster.7.4.0.nupkg.sha512",
     "/Users/vitormesquita/.nuget/packages/mapster.core/1.2.1/mapster.core.1.2.1.nupkg.sha512",
