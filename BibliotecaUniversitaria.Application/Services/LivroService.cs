@@ -1,4 +1,4 @@
-using AutoMapper;
+using Mapster;
 using BibliotecaUniversitaria.Application.Interfaces;
 using BibliotecaUniversitaria.Application.ViewModels;
 using BibliotecaUniversitaria.Domain.Entities;
@@ -9,24 +9,22 @@ namespace BibliotecaUniversitaria.Application.Services
     public class LivroService : ILivroService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
 
-        public LivroService(IUnitOfWork unitOfWork, IMapper mapper)
+        public LivroService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
         }
 
         public async Task<IEnumerable<LivroListViewModel>> ObterTodosAsync()
         {
             var livros = await _unitOfWork.Livros.GetAllAsync();
-            return _mapper.Map<IEnumerable<LivroListViewModel>>(livros);
+            return livros.Adapt<IEnumerable<LivroListViewModel>>();
         }
 
         public async Task<LivroViewModel?> ObterPorIdAsync(int id)
         {
             var livro = await _unitOfWork.Livros.GetByIdAsync(id);
-            return livro != null ? _mapper.Map<LivroViewModel>(livro) : null;
+            return livro != null ? livro.Adapt<LivroViewModel>() : null;
         }
 
 
@@ -34,13 +32,13 @@ namespace BibliotecaUniversitaria.Application.Services
         public async Task<IEnumerable<LivroListViewModel>> BuscarPorTituloAsync(string titulo)
         {
             var livros = await _unitOfWork.Livros.GetByTituloAsync(titulo);
-            return _mapper.Map<IEnumerable<LivroListViewModel>>(livros);
+            return livros.Adapt<IEnumerable<LivroListViewModel>>();
         }
 
         public async Task<IEnumerable<LivroListViewModel>> ObterDisponiveisAsync()
         {
             var livros = await _unitOfWork.Livros.GetDisponiveisAsync();
-            return _mapper.Map<IEnumerable<LivroListViewModel>>(livros);
+            return livros.Adapt<IEnumerable<LivroListViewModel>>();
         }
 
         public async Task<LivroViewModel> CriarAsync(LivroViewModel model)
@@ -67,7 +65,7 @@ namespace BibliotecaUniversitaria.Application.Services
             await _unitOfWork.Livros.AddAsync(livro);
             await _unitOfWork.SaveChangesAsync();
 
-            return _mapper.Map<LivroViewModel>(livro);
+            return livro.Adapt<LivroViewModel>();
         }
 
         public async Task<LivroViewModel> AtualizarAsync(LivroViewModel model)
@@ -96,7 +94,7 @@ namespace BibliotecaUniversitaria.Application.Services
             _unitOfWork.Livros.Update(livro);
             await _unitOfWork.SaveChangesAsync();
 
-            return _mapper.Map<LivroViewModel>(livro);
+            return livro.Adapt<LivroViewModel>();
         }
 
         public async Task<bool> ExcluirAsync(int id)

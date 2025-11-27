@@ -1,26 +1,24 @@
 using Microsoft.AspNetCore.Mvc;
 using BibliotecaUniversitaria.Application.Interfaces;
 using BibliotecaUniversitaria.Application.DTOs;
-using AutoMapper;
+using Mapster;
 
 namespace BibliotecaUniversitaria.Presentation.Controllers
 {
     public class AutoresController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
 
-        public AutoresController(IUnitOfWork unitOfWork, IMapper mapper)
+        public AutoresController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
             var autores = await _unitOfWork.Autores.GetAllAsync();
-            var autoresDto = _mapper.Map<IEnumerable<AutorDTO>>(autores);
+            var autoresDto = autores.Adapt<IEnumerable<AutorDTO>>();
             return View(autoresDto);
         }
 
@@ -38,7 +36,7 @@ namespace BibliotecaUniversitaria.Presentation.Controllers
                 return NotFound();
             }
 
-            var autorDto = _mapper.Map<AutorDTO>(autor);
+            var autorDto = autor.Adapt<AutorDTO>();
             return View(autorDto);
         }
 
@@ -92,7 +90,7 @@ namespace BibliotecaUniversitaria.Presentation.Controllers
                 return NotFound();
             }
 
-            var autorDto = _mapper.Map<AutorCreateDTO>(autor);
+            var autorDto = autor.Adapt<AutorCreateDTO>();
             return View(autorDto);
         }
 
@@ -149,7 +147,7 @@ namespace BibliotecaUniversitaria.Presentation.Controllers
                 return NotFound();
             }
 
-            var autorDto = _mapper.Map<AutorDTO>(autor);
+            var autorDto = autor.Adapt<AutorDTO>();
             return View(autorDto);
         }
 

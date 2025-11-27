@@ -8,6 +8,7 @@ namespace BibliotecaUniversitaria.Application.ViewModels
 
         [Required(ErrorMessage = "Título é obrigatório")]
         [StringLength(300, ErrorMessage = "Título deve ter no máximo 300 caracteres")]
+        [BibliotecaUniversitaria.Application.Attributes.NotOnlyWhitespace(ErrorMessage = "Título não pode conter apenas espaços em branco")]
         public string Titulo { get; set; } = string.Empty;
 
 

@@ -1,0 +1,90 @@
+===========================================
+TRABALHO FINAL - DESENVOLVIMENTO AVANÇADO I
+Sistema CRUD em .NET Core - Clean Architecture e DDD
+===========================================
+
+STATUS GERAL: [CONCLUÍDO]
+
+===========================================`
+REQUISITOS OBRIGATÓRIOS
+===========================================
+
+[✓] 1. ESTRUTURA JÁ DESENVOLVIDA NA APS2
+    - Domínio: entidades, regras e conceitos centrais do negócio
+    - Aplicação: ViewModels, interfaces, serviços de aplicação
+    - Infraestrutura: persistência de dados, repositórios concretos, migrations,
+      implementação de factory e demais serviços de acesso a dados
+    - Apresentação: controllers e views (Razor)
+    STATUS: [CONCLUÍDO] - Estrutura já existe
+
+[✓] 2. RELACIONAMENTO 1:N OBRIGATÓRIO
+    - O sistema deve possuir pelo menos uma relação de um para muitos entre duas entidades
+    - A modelagem deve refletir corretamente o uso de chave primária e chave estrangeira
+      explícita no arquivo de configuração de entidades do EF Core
+    STATUS: [CONCLUÍDO] - Autor → Livros e Categoria → Livros configurados
+
+[✓] 3. MAPEAMENTO COM MAPSTER
+    - Utilizar Mapster para mapear entidades e ViewModels dentro da camada de aplicação
+    - Evitar acoplamento direto entre domínio e apresentação
+    STATUS: [CONCLUÍDO]
+    AÇÕES REALIZADAS:
+    - Removido AutoMapper do projeto
+    - Mapster instalado e configurado
+    - Configuração de mapeamento criada em MapsterConfig.cs
+    - Todos os serviços e controllers atualizados para usar Mapster (.Adapt<>())
+    - Program.cs atualizado para registrar Mapster
+
+[✓] 4. PERSISTÊNCIA DE DADOS COM ENTITY FRAMEWORK CORE
+    - Utilizar Microsoft SQL Server como banco de dados
+    - Implementar migrations e garantir que o projeto seja totalmente executável
+    STATUS: [CONCLUÍDO] - Migrations implementadas e projeto compila corretamente
+
+[✓] 5. CRUD COMPLETO
+    - Todas as entidades principais devem possuir operações de criação, listagem, edição e exclusão
+    STATUS: [CONCLUÍDO] - Livros, Autores, Categorias e Empréstimos têm CRUD completo
+
+[✓] 6. VALIDAÇÕES BÁSICAS E PERSONALIZADAS
+    - Implementar no mínimo 2 validações personalizadas (Custom Validation Attributes)
+    - Utilizar Data Annotations para validação de entrada
+    STATUS: [CONCLUÍDO]
+    VALIDAÇÕES EXISTENTES:
+    - [✓] MaxCurrentYearAttribute (1/2)
+    - [✓] NotOnlyWhitespaceAttribute (2/2) - Valida que campos não contenham apenas espaços em branco
+
+[✓] 7. BUSCA DINÂMICA COM AJAX
+    - Implementar uma barra de busca nos itens cadastrados
+    - O resultado da busca deve ser carregado dinamicamente usando Ajax,
+      sem recarregar a página completa
+    STATUS: [CONCLUÍDO]
+    AÇÕES REALIZADAS:
+    - Endpoint SearchAjax criado no LivrosController que retorna JSON
+    - JavaScript com AJAX implementado na view Index.cshtml
+    - View atualizada para mostrar resultados dinamicamente sem recarregar a página
+
+[✓] 8. INJEÇÃO DE DEPENDÊNCIAS (DI) E INVERSÃO DE CONTROLE (IoC)
+    - Todos os serviços e repositórios devem ser registrados via DI
+    - O projeto deve utilizar corretamente o princípio da inversão de controle
+    STATUS: [CONCLUÍDO] - DI configurado no Program.cs
+
+[✓] 9. ORGANIZAÇÃO E BOAS PRÁTICAS
+    - Código limpo, organizado e com nomeação apropriada
+    - Separação clara entre responsabilidades das camadas
+    - Evitar duplicação de lógica
+    STATUS: [CONCLUÍDO] - Código bem organizado
+
+===========================================
+PRÓXIMOS PASSOS
+===========================================
+1. [✓] Substituir AutoMapper por Mapster - CONCLUÍDO
+2. [✓] Criar segunda validação personalizada - CONCLUÍDO
+3. [✓] Implementar busca dinâmica com AJAX - CONCLUÍDO
+4. [✓] Verificar migrations e execução do projeto - CONCLUÍDO
+
+TODOS OS REQUISITOS OBRIGATÓRIOS FORAM CONCLUÍDOS!
+
+===========================================
+NOTAS
+===========================================
+- Repositório deve estar público no GitHub/GitLab/BitBucket
+- Link do repositório deve ser fornecido na entrega
+

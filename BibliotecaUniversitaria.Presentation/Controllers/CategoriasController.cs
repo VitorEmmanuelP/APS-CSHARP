@@ -1,26 +1,24 @@
 using Microsoft.AspNetCore.Mvc;
 using BibliotecaUniversitaria.Application.Interfaces;
 using BibliotecaUniversitaria.Application.DTOs;
-using AutoMapper;
+using Mapster;
 
 namespace BibliotecaUniversitaria.Presentation.Controllers
 {
     public class CategoriasController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
 
-        public CategoriasController(IUnitOfWork unitOfWork, IMapper mapper)
+        public CategoriasController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
             var categorias = await _unitOfWork.Categorias.GetAllAsync();
-            var categoriasDto = _mapper.Map<IEnumerable<CategoriaDTO>>(categorias);
+            var categoriasDto = categorias.Adapt<IEnumerable<CategoriaDTO>>();
             return View(categoriasDto);
         }
 
@@ -38,7 +36,7 @@ namespace BibliotecaUniversitaria.Presentation.Controllers
                 return NotFound();
             }
 
-            var categoriaDto = _mapper.Map<CategoriaDTO>(categoria);
+            var categoriaDto = categoria.Adapt<CategoriaDTO>();
             return View(categoriaDto);
         }
 
@@ -87,7 +85,7 @@ namespace BibliotecaUniversitaria.Presentation.Controllers
                 return NotFound();
             }
 
-            var categoriaDto = _mapper.Map<CategoriaCreateDTO>(categoria);
+            var categoriaDto = categoria.Adapt<CategoriaCreateDTO>();
             return View(categoriaDto);
         }
 
@@ -142,7 +140,7 @@ namespace BibliotecaUniversitaria.Presentation.Controllers
                 return NotFound();
             }
 
-            var categoriaDto = _mapper.Map<CategoriaDTO>(categoria);
+            var categoriaDto = categoria.Adapt<CategoriaDTO>();
             return View(categoriaDto);
         }
 

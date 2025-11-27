@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using BibliotecaUniversitaria.Application.Interfaces;
 using BibliotecaUniversitaria.Application.ViewModels;
 using BibliotecaUniversitaria.Application.DTOs;
-using AutoMapper;
 
 namespace BibliotecaUniversitaria.Presentation.Controllers
 {
@@ -10,13 +9,11 @@ namespace BibliotecaUniversitaria.Presentation.Controllers
     {
         private readonly ILivroService _livroService;
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
 
-        public LivrosController(ILivroService livroService, IUnitOfWork unitOfWork, IMapper mapper)
+        public LivrosController(ILivroService livroService, IUnitOfWork unitOfWork)
         {
             _livroService = livroService;
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
         }
 
         [HttpGet]
@@ -173,6 +170,23 @@ namespace BibliotecaUniversitaria.Presentation.Controllers
 
             var livros = await _livroService.BuscarPorTituloAsync(titulo);
             return View("Index", livros);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> SearchAjax(string? termo)
+        {
+            IEnumerable<LivroListViewModel> livros;
+
+            if (string.IsNullOrWhiteSpace(termo))
+            {
+                livros = await _livroService.ObterTodosAsync();
+            }
+            else
+            {
+                livros = await _livroService.BuscarPorTituloAsync(termo);
+            }
+
+            return Json(livros);
         }
 
 

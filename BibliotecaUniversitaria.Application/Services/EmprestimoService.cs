@@ -1,4 +1,4 @@
-using AutoMapper;
+using Mapster;
 using BibliotecaUniversitaria.Application.Interfaces;
 using BibliotecaUniversitaria.Application.DTOs;
 using BibliotecaUniversitaria.Domain.Entities;
@@ -10,37 +10,35 @@ namespace BibliotecaUniversitaria.Application.Services
     public class EmprestimoService : IEmprestimoService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
 
-        public EmprestimoService(IUnitOfWork unitOfWork, IMapper mapper)
+        public EmprestimoService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
         }
 
         public async Task<IEnumerable<EmprestimoDTO>> ObterTodosAsync()
         {
             var emprestimos = await _unitOfWork.Emprestimos.GetAllAsync();
-            return _mapper.Map<IEnumerable<EmprestimoDTO>>(emprestimos);
+            return emprestimos.Adapt<IEnumerable<EmprestimoDTO>>();
         }
 
         public async Task<EmprestimoDTO?> ObterPorIdAsync(int id)
         {
             var emprestimo = await _unitOfWork.Emprestimos.GetByIdAsync(id);
-            return emprestimo != null ? _mapper.Map<EmprestimoDTO>(emprestimo) : null;
+            return emprestimo != null ? emprestimo.Adapt<EmprestimoDTO>() : null;
         }
 
 
         public async Task<IEnumerable<EmprestimoDTO>> ObterAtivosAsync()
         {
             var emprestimos = await _unitOfWork.Emprestimos.GetAtivosAsync();
-            return _mapper.Map<IEnumerable<EmprestimoDTO>>(emprestimos);
+            return emprestimos.Adapt<IEnumerable<EmprestimoDTO>>();
         }
 
         public async Task<IEnumerable<EmprestimoDTO>> ObterAtrasadosAsync()
         {
             var emprestimos = await _unitOfWork.Emprestimos.GetAtrasadosAsync();
-            return _mapper.Map<IEnumerable<EmprestimoDTO>>(emprestimos);
+            return emprestimos.Adapt<IEnumerable<EmprestimoDTO>>();
         }
 
         public async Task<EmprestimoDTO> CriarAsync(EmprestimoCreateDTO dto)
@@ -69,7 +67,7 @@ namespace BibliotecaUniversitaria.Application.Services
             _unitOfWork.Livros.Update(livro);
             await _unitOfWork.SaveChangesAsync();
 
-            return _mapper.Map<EmprestimoDTO>(emprestimo);
+            return emprestimo.Adapt<EmprestimoDTO>();
         }
 
         public async Task<EmprestimoDTO> DevolverAsync(int id, EmprestimoDevolucaoDTO dto)
@@ -95,7 +93,7 @@ namespace BibliotecaUniversitaria.Application.Services
             _unitOfWork.Emprestimos.Update(emprestimo);
             await _unitOfWork.SaveChangesAsync();
 
-            return _mapper.Map<EmprestimoDTO>(emprestimo);
+            return emprestimo.Adapt<EmprestimoDTO>();
         }
 
         public async Task<bool> CancelarAsync(int id)

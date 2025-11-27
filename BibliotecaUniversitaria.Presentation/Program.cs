@@ -13,7 +13,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+// Configurar Mapster
+MapsterConfig.RegisterMappings();
 
 builder.Services.AddScoped<IDatabaseFactory, DatabaseFactory>();
 
