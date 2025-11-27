@@ -119,14 +119,50 @@ namespace BibliotecaUniversitaria.Application.Services
                            e.Status == Domain.Enums.StatusEmprestimo.Cancelado)
                 .ToList();
 
-            if (emprestimosFinalizados.Any())
+            // Usa transação para garantir integridade
+            await _unitOfWork.BeginTransactionAsync();
+            try
             {
-                _unitOfWork.Emprestimos.RemoveRange(emprestimosFinalizados);
-            }
+                bool temMultasParaRemover = false;
 
-            _unitOfWork.Livros.Remove(livro);
-            await _unitOfWork.SaveChangesAsync();
-            return true;
+                // Remove multas relacionadas aos empréstimos finalizados
+                foreach (var emprestimo in emprestimosFinalizados)
+                {
+                    var multas = await _unitOfWork.Multas.GetByEmprestimoIdAsync(emprestimo.Id);
+                    if (multas.Any())
+                    {
+                        _unitOfWork.Multas.RemoveRange(multas);
+                        temMultasParaRemover = true;
+                    }
+                }
+
+                // Salva as multas removidas primeiro (se houver)
+                if (temMultasParaRemover)
+                {
+                    await _unitOfWork.SaveChangesAsync();
+                }
+
+                // Remove os empréstimos finalizados
+                if (emprestimosFinalizados.Any())
+                {
+                    _unitOfWork.Emprestimos.RemoveRange(emprestimosFinalizados);
+                    // Salva a remoção dos empréstimos antes de remover o livro
+                    await _unitOfWork.SaveChangesAsync();
+                }
+
+                // Remove o livro (agora sem empréstimos relacionados)
+                _unitOfWork.Livros.Remove(livro);
+                await _unitOfWork.SaveChangesAsync();
+
+                await _unitOfWork.CommitTransactionAsync();
+
+                return true;
+            }
+            catch
+            {
+                await _unitOfWork.RollbackTransactionAsync();
+                throw;
+            }
         }
 
         public async Task<bool> ExisteAsync(int id)
