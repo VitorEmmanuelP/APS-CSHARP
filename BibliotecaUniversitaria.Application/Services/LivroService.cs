@@ -100,7 +100,7 @@ namespace BibliotecaUniversitaria.Application.Services
         public async Task<bool> ExcluirAsync(int id)
         {
             // Verifica se o livro existe sem carregá-lo no contexto
-            if (!await _unitOfWork.Livros.ExistsAsync(l => l.Id == id))
+            if (!await _unitOfWork.ExistsLivroAsync(id))
                 return false;
 
             // Busca empréstimos via SQL sem rastreamento (evita problemas de ChangeTracker)

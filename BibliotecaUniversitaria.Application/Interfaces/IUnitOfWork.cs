@@ -14,5 +14,6 @@ namespace BibliotecaUniversitaria.Application.Interfaces
         Task RollbackTransactionAsync();
         Task<int> ExecuteSqlRawAsync(string sql, params object[] parameters);
         Task<List<(int Id, int Status)>> QueryEmprestimosByLivroIdAsync(int livroId);
+        Task<bool> ExistsLivroAsync(int livroId);
     }
 }

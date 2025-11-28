@@ -73,6 +73,14 @@ namespace BibliotecaUniversitaria.Infrastructure.Repositories
             return emprestimos.Select(e => (e.Id, e.Status)).ToList();
         }
 
+        public async Task<bool> ExistsLivroAsync(int livroId)
+        {
+            // Usa DbSet com AsNoTracking e AnyAsync para verificar existência sem carregar no contexto
+            return await Context.Set<Domain.Entities.Livro>()
+                .AsNoTracking()
+                .AnyAsync(l => l.Id == livroId);
+        }
+
         public void Dispose()
         {
             _transaction?.Dispose();
