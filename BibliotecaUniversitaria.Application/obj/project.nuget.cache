@@ -1,13 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "z9oyl7yqyCA=",
+  "dgSpecHash": "12U+civ6U9w=",
   "success": true,
-  "projectFilePath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
+  "projectFilePath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
   "expectedPackageFiles": [
-    "/Users/vitormesquita/.nuget/packages/mapster/7.4.0/mapster.7.4.0.nupkg.sha512",
-    "/Users/vitormesquita/.nuget/packages/mapster.core/1.2.1/mapster.core.1.2.1.nupkg.sha512",
-    "/Users/vitormesquita/.nuget/packages/microsoft.netcore.app.ref/8.0.19/microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
-    "/Users/vitormesquita/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.19/microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512"
+    "/home/vscode/.nuget/packages/mapster/7.4.0/mapster.7.4.0.nupkg.sha512",
+    "/home/vscode/.nuget/packages/mapster.core/1.2.1/mapster.core.1.2.1.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,34 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj": {}
+    "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj": {}
   },
   "projects": {
-    "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {
+    "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
+        "projectUniqueName": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
         "projectName": "BibliotecaUniversitaria.Application",
-        "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
-        "packagesPath": "/Users/vitormesquita/.nuget/packages/",
-        "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/obj/",
+        "projectPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj",
+        "packagesPath": "/home/vscode/.nuget/packages/",
+        "outputPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vitormesquita/.nuget/NuGet/NuGet.Config"
+          "/home/vscode/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/opt/homebrew/Cellar/dotnet/9.0.8/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj": {
-                "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj"
+              "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj": {
+                "projectPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj"
               }
             }
           }
@@ -42,8 +41,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -65,42 +63,31 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/9.0.8/libexec/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj": {
+    "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
+        "projectUniqueName": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
         "projectName": "BibliotecaUniversitaria.Domain",
-        "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
-        "packagesPath": "/Users/vitormesquita/.nuget/packages/",
-        "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/obj/",
+        "projectPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj",
+        "packagesPath": "/home/vscode/.nuget/packages/",
+        "outputPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vitormesquita/.nuget/NuGet/NuGet.Config"
+          "/home/vscode/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/opt/homebrew/Cellar/dotnet/9.0.8/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -118,8 +105,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -135,53 +121,42 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/9.0.8/libexec/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj": {
+    "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj",
+        "projectUniqueName": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj",
         "projectName": "BibliotecaUniversitaria.Infrastructure",
-        "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj",
-        "packagesPath": "/Users/vitormesquita/.nuget/packages/",
-        "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/obj/",
+        "projectPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj",
+        "packagesPath": "/home/vscode/.nuget/packages/",
+        "outputPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vitormesquita/.nuget/NuGet/NuGet.Config"
+          "/home/vscode/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/opt/homebrew/Cellar/dotnet/9.0.8/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {
-                "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj"
+              "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {
+                "projectPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj"
               },
-              "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj": {
-                "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj"
+              "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj": {
+                "projectPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Domain/BibliotecaUniversitaria.Domain.csproj"
               }
             }
           }
@@ -195,8 +170,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -230,53 +204,42 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/9.0.8/libexec/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj": {
+    "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj",
+        "projectUniqueName": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj",
         "projectName": "BibliotecaUniversitaria.Presentation",
-        "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj",
-        "packagesPath": "/Users/vitormesquita/.nuget/packages/",
-        "outputPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Presentation/obj/",
+        "projectPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.csproj",
+        "packagesPath": "/home/vscode/.nuget/packages/",
+        "outputPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Presentation/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vitormesquita/.nuget/NuGet/NuGet.Config"
+          "/home/vscode/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/opt/homebrew/Cellar/dotnet/9.0.8/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {
-                "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj"
+              "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj": {
+                "projectPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Application/BibliotecaUniversitaria.Application.csproj"
               },
-              "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj": {
-                "projectPath": "/Users/vitormesquita/Code/A/AULA-CSHARP/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj"
+              "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj": {
+                "projectPath": "/workspaces/APS-CSHARP/BibliotecaUniversitaria.Infrastructure/BibliotecaUniversitaria.Infrastructure.csproj"
               }
             }
           }
@@ -290,8 +253,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -319,20 +281,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.osx-arm64",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -341,7 +289,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/9.0.8/libexec/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
