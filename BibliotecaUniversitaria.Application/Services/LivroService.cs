@@ -99,8 +99,8 @@ namespace BibliotecaUniversitaria.Application.Services
 
         public async Task<bool> ExcluirAsync(int id)
         {
-            var livro = await _unitOfWork.Livros.GetByIdAsync(id);
-            if (livro == null)
+            // Verifica se o livro existe sem carregá-lo no contexto
+            if (!await _unitOfWork.Livros.ExistsAsync(l => l.Id == id))
                 return false;
 
             var todosEmprestimos = await _unitOfWork.Emprestimos.GetByLivroIdAsync(id);
@@ -119,24 +119,15 @@ namespace BibliotecaUniversitaria.Application.Services
                            e.Status == Domain.Enums.StatusEmprestimo.Cancelado)
                 .ToList();
 
-            if (!emprestimosFinalizados.Any())
-            {
-                // Se não há empréstimos, pode deletar diretamente
-                _unitOfWork.Livros.Remove(livro);
-                await _unitOfWork.SaveChangesAsync();
-                return true;
-            }
-
             // Usa transação para garantir integridade
             await _unitOfWork.BeginTransactionAsync();
             try
             {
-                // Obtém IDs dos empréstimos finalizados
-                var emprestimosIds = emprestimosFinalizados.Select(e => e.Id).ToList();
-
-                // Remove multas relacionadas via SQL direto (evita rastreamento do EF Core)
-                if (emprestimosIds.Any())
+                // Remove multas e empréstimos finalizados via SQL direto (evita rastreamento do EF Core)
+                if (emprestimosFinalizados.Any())
                 {
+                    var emprestimosIds = emprestimosFinalizados.Select(e => e.Id).ToList();
+
                     // Remove multas uma por uma para evitar SQL injection
                     foreach (var emprestimoId in emprestimosIds)
                     {
@@ -152,7 +143,7 @@ namespace BibliotecaUniversitaria.Application.Services
                     }
                 }
 
-                // Remove o livro via SQL direto (evita problemas de navegação)
+                // Remove o livro via SQL direto (nunca carregado no contexto, evita problemas de navegação)
                 await _unitOfWork.ExecuteSqlRawAsync(
                     "DELETE FROM Livros WHERE Id = {0}", id);
 
