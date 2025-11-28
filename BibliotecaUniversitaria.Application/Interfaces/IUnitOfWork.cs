@@ -12,5 +12,6 @@ namespace BibliotecaUniversitaria.Application.Interfaces
         Task BeginTransactionAsync();
         Task CommitTransactionAsync();
         Task RollbackTransactionAsync();
+        Task<int> ExecuteSqlRawAsync(string sql, params object[] parameters);
     }
 }

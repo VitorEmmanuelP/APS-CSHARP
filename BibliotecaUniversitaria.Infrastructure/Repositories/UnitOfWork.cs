@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using BibliotecaUniversitaria.Application.Interfaces;
 using BibliotecaUniversitaria.Infrastructure.Data;
@@ -53,6 +54,11 @@ namespace BibliotecaUniversitaria.Infrastructure.Repositories
                 await _transaction.DisposeAsync();
                 _transaction = null;
             }
+        }
+
+        public async Task<int> ExecuteSqlRawAsync(string sql, params object[] parameters)
+        {
+            return await Context.Database.ExecuteSqlRawAsync(sql, parameters);
         }
 
         public void Dispose()

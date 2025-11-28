@@ -119,40 +119,42 @@ namespace BibliotecaUniversitaria.Application.Services
                            e.Status == Domain.Enums.StatusEmprestimo.Cancelado)
                 .ToList();
 
+            if (!emprestimosFinalizados.Any())
+            {
+                // Se não há empréstimos, pode deletar diretamente
+                _unitOfWork.Livros.Remove(livro);
+                await _unitOfWork.SaveChangesAsync();
+                return true;
+            }
+
             // Usa transação para garantir integridade
             await _unitOfWork.BeginTransactionAsync();
             try
             {
-                bool temMultasParaRemover = false;
+                // Obtém IDs dos empréstimos finalizados
+                var emprestimosIds = emprestimosFinalizados.Select(e => e.Id).ToList();
 
-                // Remove multas relacionadas aos empréstimos finalizados
-                foreach (var emprestimo in emprestimosFinalizados)
+                // Remove multas relacionadas via SQL direto (evita rastreamento do EF Core)
+                if (emprestimosIds.Any())
                 {
-                    var multas = await _unitOfWork.Multas.GetByEmprestimoIdAsync(emprestimo.Id);
-                    if (multas.Any())
+                    // Remove multas uma por uma para evitar SQL injection
+                    foreach (var emprestimoId in emprestimosIds)
                     {
-                        _unitOfWork.Multas.RemoveRange(multas);
-                        temMultasParaRemover = true;
+                        await _unitOfWork.ExecuteSqlRawAsync(
+                            "DELETE FROM Multas WHERE EmprestimoId = {0}", emprestimoId);
+                    }
+
+                    // Remove empréstimos um por um para evitar SQL injection
+                    foreach (var emprestimoId in emprestimosIds)
+                    {
+                        await _unitOfWork.ExecuteSqlRawAsync(
+                            "DELETE FROM Emprestimos WHERE Id = {0}", emprestimoId);
                     }
                 }
 
-                // Salva as multas removidas primeiro (se houver)
-                if (temMultasParaRemover)
-                {
-                    await _unitOfWork.SaveChangesAsync();
-                }
-
-                // Remove os empréstimos finalizados
-                if (emprestimosFinalizados.Any())
-                {
-                    _unitOfWork.Emprestimos.RemoveRange(emprestimosFinalizados);
-                    // Salva a remoção dos empréstimos antes de remover o livro
-                    await _unitOfWork.SaveChangesAsync();
-                }
-
-                // Remove o livro (agora sem empréstimos relacionados)
-                _unitOfWork.Livros.Remove(livro);
-                await _unitOfWork.SaveChangesAsync();
+                // Remove o livro via SQL direto (evita problemas de navegação)
+                await _unitOfWork.ExecuteSqlRawAsync(
+                    "DELETE FROM Livros WHERE Id = {0}", id);
 
                 await _unitOfWork.CommitTransactionAsync();
 
