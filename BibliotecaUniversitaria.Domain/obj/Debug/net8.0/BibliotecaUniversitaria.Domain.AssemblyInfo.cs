@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BibliotecaUniversitaria.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4992eec70016b731e18c4ce4fda27fa5422930d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07b92dbd4e5cbd1eb3c17467c28abc24dd73244e")]
 [assembly: System.Reflection.AssemblyProductAttribute("BibliotecaUniversitaria.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BibliotecaUniversitaria.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

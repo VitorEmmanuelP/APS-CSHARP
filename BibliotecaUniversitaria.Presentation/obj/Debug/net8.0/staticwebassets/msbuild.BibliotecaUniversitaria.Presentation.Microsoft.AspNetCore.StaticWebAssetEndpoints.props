@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BibliotecaUniversitaria.Presentation.a1erg548y5.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a1erg548y5"},{"Name":"integrity","Value":"sha256-Mvwo1YE9moKHekTc/7Fz7mWXM1VR06/\u002BNV7NU7z99x8="},{"Name":"label","Value":"_content/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1105"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Mvwo1YE9moKHekTc/7Fz7mWXM1VR06/\u002BNV7NU7z99x8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 28 Nov 2025 01:55:07 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1105"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Mvwo1YE9moKHekTc/7Fz7mWXM1VR06/\u002BNV7NU7z99x8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 28 Nov 2025 01:59:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BibliotecaUniversitaria.Presentation/BibliotecaUniversitaria.Presentation.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BibliotecaUniversitaria.Presentation.a1erg548y5.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Mvwo1YE9moKHekTc/7Fz7mWXM1VR06/\u002BNV7NU7z99x8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1105"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Mvwo1YE9moKHekTc/7Fz7mWXM1VR06/\u002BNV7NU7z99x8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 28 Nov 2025 01:55:07 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1105"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Mvwo1YE9moKHekTc/7Fz7mWXM1VR06/\u002BNV7NU7z99x8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 28 Nov 2025 01:59:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BibliotecaUniversitaria.Presentation/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
