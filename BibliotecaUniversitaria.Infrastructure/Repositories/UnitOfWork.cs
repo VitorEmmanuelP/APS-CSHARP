@@ -61,6 +61,18 @@ namespace BibliotecaUniversitaria.Infrastructure.Repositories
             return await Context.Database.ExecuteSqlRawAsync(sql, parameters);
         }
 
+        public async Task<List<(int Id, int Status)>> QueryEmprestimosByLivroIdAsync(int livroId)
+        {
+            // Usa DbSet com AsNoTracking para evitar rastreamento do EF Core
+            var emprestimos = await Context.Set<Domain.Entities.Emprestimo>()
+                .Where(e => e.LivroId == livroId)
+                .Select(e => new { e.Id, Status = (int)e.Status })
+                .AsNoTracking()
+                .ToListAsync();
+
+            return emprestimos.Select(e => (e.Id, e.Status)).ToList();
+        }
+
         public void Dispose()
         {
             _transaction?.Dispose();

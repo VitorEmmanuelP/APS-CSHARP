@@ -103,20 +103,21 @@ namespace BibliotecaUniversitaria.Application.Services
             if (!await _unitOfWork.Livros.ExistsAsync(l => l.Id == id))
                 return false;
 
-            var todosEmprestimos = await _unitOfWork.Emprestimos.GetByLivroIdAsync(id);
+            // Busca empréstimos via SQL sem rastreamento (evita problemas de ChangeTracker)
+            var emprestimosInfo = await _unitOfWork.QueryEmprestimosByLivroIdAsync(id);
 
             // Verifica se há empréstimos ativos ou atrasados (não pode deletar)
-            var emprestimosAtivosOuAtrasados = todosEmprestimos
-                .Where(e => e.Status == Domain.Enums.StatusEmprestimo.Ativo ||
-                           e.Status == Domain.Enums.StatusEmprestimo.Atrasado);
+            var emprestimosAtivosOuAtrasados = emprestimosInfo
+                .Where(e => e.Status == (int)Domain.Enums.StatusEmprestimo.Ativo ||
+                           e.Status == (int)Domain.Enums.StatusEmprestimo.Atrasado);
 
             if (emprestimosAtivosOuAtrasados.Any())
                 throw new BusinessRuleValidationException("Não é possível excluir um livro com empréstimos ativos ou atrasados");
 
             // Remove empréstimos devolvidos ou cancelados antes de deletar o livro
-            var emprestimosFinalizados = todosEmprestimos
-                .Where(e => e.Status == Domain.Enums.StatusEmprestimo.Devolvido ||
-                           e.Status == Domain.Enums.StatusEmprestimo.Cancelado)
+            var emprestimosFinalizados = emprestimosInfo
+                .Where(e => e.Status == (int)Domain.Enums.StatusEmprestimo.Devolvido ||
+                           e.Status == (int)Domain.Enums.StatusEmprestimo.Cancelado)
                 .ToList();
 
             // Usa transação para garantir integridade
